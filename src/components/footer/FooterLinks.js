@@ -12,8 +12,8 @@ const FooterLinks = () => {
       { id: 3, name: "contact", route: "/contact" },
     ],
     partners: [
-      { id: 1, name: "booking", route: "/https://www.booking.com/" },
-      { id: 2, name: "trivago", route: "/https://www.trivago.com/" },
+      { id: 1, name: "booking", route: "https://www.booking.com/" },
+      { id: 2, name: "trivago", route: "https://www.trivago.com/" },
       { id: 3, name: "hostel world", route: "https://www.hostelworld.com/" },
       { id: 4, name: "trip advisor", route: "https://www.tripadvisor.com/" },
     ],
@@ -32,7 +32,7 @@ const FooterLinks = () => {
       </div>
       <div className="col-4 p-15">
         <h3 className="footer__heading">{headings.partners}</h3>
-        <ShowFooterLinks links={partners} />
+        <ShowFooterLinks links={partners} external={true} />
       </div>
       <div className="col-4 p-15">
         <h3 className="footer__heading">{headings.destinations}</h3>

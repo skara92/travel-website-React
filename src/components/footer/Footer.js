@@ -21,6 +21,9 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="footer__bottom">
+                        <p>&copy; copy right travel friends {new Date().getFullYear()}</p>
+                    </div>
                 </div>
             </div>
         </footer>
