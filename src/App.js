@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Details from "./pages/Details";
+import Contact from "./pages/Contact";
 import ModelProvider from "./context/providers/ModelProvider";
 import NavProvider from "./context/providers/NavProvider";
 import SharedProvider from "./context/providers/SharedProvider";
@@ -26,6 +27,7 @@ function App() {
                     <Route path="/" exact component={Home} />
                     <Route path="/about" exact component={About} />
                     <Route path="/details/:id" exact component={Details} />
+                    <Route path="/contact" component={Contact} />
                     <Route component={NotFound} />
                   </Switch>
                 </HelmetProvider>

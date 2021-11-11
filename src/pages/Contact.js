@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import PageContainer from "../components/pages-parts/PageContainer";
-import AboutImage from "../components/pages-parts/AboutImage";
-const About = () => {
+import ContactForm from "../components/pages-parts/ContactForm";
+const Contact = () => {
   const [state] = useState({
-    heading: "about us",
-    pageHeading: "world's best travel agency company since 2005",
+    heading: "contact us",
+    pageHeading: "leave your message in the contact form",
     message:
       " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum inventore quae vitae. Ipsa natus iste vitae dolores pariatur earum quidem qui dignissimos! Enim minus quas, aperiam earum culpa ullam ad!  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum inventore quae vitae. Ipsa natus iste vitae dolores pariatur earum quidem qui dignissimos! Enim minus quas, aperiam earum culpa ullam ad!",
   });
@@ -15,13 +15,13 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About page</title>
-        <meta name="description" content="travel friends about page" />
+        <title>Contact page</title>
+        <meta name="description" content="travel friends contact page" />
       </Helmet>
       <PageContainer data={state}>
-        <AboutImage />
+        <ContactForm />
       </PageContainer>
     </>
   );
 };
-export default About;
+export default Contact;
