@@ -1,6 +1,16 @@
+import { useState } from "react";
 const ContactForm = () => {
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const submitContact = (e) => {
+    e.preventDefault();
+    console.log(state);
+  };
   return (
-    <form>
+    <form onSubmit={submitContact}>
       <div className="group">
         <h3 className="page__contact__heading">Contact form</h3>
       </div>
@@ -9,6 +19,8 @@ const ContactForm = () => {
           type="text"
           className="group__control"
           placeholder="Your name eg.smith"
+          value={state.name}
+          onChange={(e) => setState({ ...state, name: e.target.value })}
         />
       </div>
       <div className="group">
@@ -16,6 +28,8 @@ const ContactForm = () => {
           type="email"
           className="group__control"
           placeholder="Your email eg.smith@email.com"
+          value={state.email}
+          onChange={(e) => setState({ ...state, email: e.target.value })}
         />
       </div>
       <div className="group">
@@ -24,6 +38,8 @@ const ContactForm = () => {
           rows="8"
           className="group__textarea"
           placeholder="Write your message eg. I have troubles"
+          defaultValue={state.message}
+          onChange={(e) => setState({ ...state, message: e.target.value })}
         ></textarea>
       </div>
       <div className="group">
